@@ -1,0 +1,33 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>Button page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1>Click + to increase, Click - to decrease, Click reset to reset</h1>
+    <button id="btn-plus" onclick="plus()">+</button>
+    <button id="btn-minus" onclick="minus()">-</button>
+    <button id="btn-reset" onclick="reset()">reset</button>
+    <div id="display">0</div>
+  </body>
+  <script>
+    let number = document.getElementById("display");
+    
+    
+    function plus() {
+      number.innerHTML++;
+    }
+    
+    function minus() {
+      if (number.innerHTML == '0') return;
+      number.innerHTML--;
+    }
+
+    function reset() {
+      number.innerHTML = 0;
+    }
+  </script>
+</html>
